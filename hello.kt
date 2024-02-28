@@ -173,12 +173,26 @@ fun whileLoop(): Unit {
 }
 
 
+fun functions(age: Int): Boolean {
+    return age >= 18
+}
+
+fun functionsShort(age: Int): Boolean = age >= 18
+fun permitEntrance(vararg ages: Int): Boolean {
+    return ages.any {age -> age >= 18}
+}
 fun main() {    
-    //variables()
+    //variables()  
     //nullSafety()
     //conditionalIf()
     //conditionalWhen()
     //collections()
     //forLoop()
-    whileLoop()
+    //whileLoop()
+    //print(functions(7))
+    //print(functions(18))
+    println(functionsShort(5))
+    println(functionsShort(25))
+    println(permitEntrance(12, 18, 6))
+    println(permitEntrance(12, 4, 6)) 
 }
