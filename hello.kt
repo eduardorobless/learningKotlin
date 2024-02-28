@@ -158,6 +158,20 @@ fun forLoop(): Unit {
     } 
 }
 
+fun whileLoop(): Unit {
+    var i = 1
+
+    while (i <= 10) {
+        print("$i ")
+        i++
+    }   
+
+    do {
+        println(i)
+        i++
+    } while(i <= 20)
+}
+
 
 fun main() {    
     //variables()
@@ -165,5 +179,6 @@ fun main() {
     //conditionalIf()
     //conditionalWhen()
     //collections()
-    forLoop()
+    //forLoop()
+    whileLoop()
 }
