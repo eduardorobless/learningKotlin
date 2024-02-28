@@ -1,5 +1,7 @@
 
+import java.util.Random
 val PI = 3.1415
+
 fun variables() : Unit  {
     val name: String= "Eduardo Ignacio Robles Sosa"
     var age: Int= 24
@@ -135,6 +137,8 @@ fun collections(): Unit {
     for(element in listCopy) {
         println(element)
     }
+
+
 }
 
 
@@ -194,6 +198,22 @@ fun challenge() {
 
 }
 
+fun challenge2() {
+    val integers: MutableList<Int>  = mutableListOf()
+    val random = Random()
+    for(i in 1..100) {
+        integers.add(random.nextInt(100) + 1)
+    }
+
+
+    var i = 0
+    while(i < integers.size  && integers[i] > 10) {
+        println(integers[i])
+        i++
+    }
+    
+}
+
 fun main(args: Array<String>) {    
     println(PI)
     //variables()  
@@ -209,5 +229,6 @@ fun main(args: Array<String>) {
     // println(functionsShort(25))
     // println(permitEntrance(12, 18, 6))
     // println(permitEntrance(12, 4, 6)) 
-    challenge()
+    //challenge()
+    challenge2()
 }
