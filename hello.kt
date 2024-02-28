@@ -23,7 +23,32 @@ fun nullSafety(): Unit {
     println("Using elvis operator, length has a value of: $strLength")
 }   
 
+fun conditionals(): Unit {
+     val i= 50
+    // if (i < 15) {
+    //     println("i is pretty small")
+    // } else if (i >= 15 && i <= 25){
+    //     println("i it's okay")
+    // } else {
+    //     println("i it's pretty large")
+    // }
+
+    val x =     if (i < 15) {
+        println("i is pretty small")
+        "small"
+    } else if (i >= 15 && i <= 25){
+        println("i it's okay")
+        "okay"
+    } else {
+        println("i it's pretty large")
+        "large"
+    }
+
+    println("i is $x")
+}
+
 fun main() {    
     //variables()
-    nullSafety()
+    //nullSafety()
+    conditionals()
 }
