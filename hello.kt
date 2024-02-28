@@ -67,9 +67,79 @@ fun conditionalWhen(): Unit {
     }
 }
 
+fun collections(): Unit {
+    // note that in kotling there are muttable and immutable collections 
+    // the main ones are: list, map and sets, lets have fun 
+
+    ////ARRAYS////
+    // object array
+    // val array = arrayOf(1, 2, 3, 4, 5)
+    // println(array)
+    // // any type array
+    // val array2 : Array<Any?> = arrayOf(1, "two", 3, 4, "car")
+    // println(array2)
+    // println(array2.joinToString())
+
+    // // int array
+    // val array3 = intArrayOf(1, 1, 2, 3, 5, 8)
+    // println(array3.joinToString())
+ 
+    ////LISTS////
+    // // immutable list 
+    // val list = listOf(1, 1, 2, 3, 5)
+    // for(element in list) {
+    //     println(element)
+    // }
+
+    // // mutable list
+    // val mutableList = mutableListOf(1, 1, 2, 3, 5)
+    // mutableList.add(8)
+    // for(mutableElem in mutableList) {
+    //     println(mutableElem)
+    // }
+
+    ////SETS////
+    // immutable set
+    val set = setOf(1, 2, 3)
+    // //set.add(4) // this should create an error -> unresolved reference: add
+    // for(element in set) {
+    //     println(element)
+    // }
+
+    // //mutable set 
+    // val set2 = mutableSetOf(1, 2, 3)
+    // set2.add(4) // allowed operation 
+    // for(element in set2) {
+    //     println(element)
+    // }
+
+    ///MAPS////
+    // immutable map
+    // val map = mapOf(Pair(1, "Kotlin"), Pair(2, "Java"))
+    // //map.put(3, "C++") // should trow error
+    // for((key, value) in map) {
+    //     println("Key: $key, Value: $value")
+    // }
+    // // mutable map    
+    // // using infix...
+    // val mutableMap = mutableMapOf(1 to "Kotlin", 2 to "Java")
+    // mutableMap.put(3, "C++") // should trow error
+
+    // for((key, value) in mutableMap) {
+    //     println("Key: $key, Value: $value")
+    // }
+    // COPIES////
+    // Creating copies between collections using toList 
+    val listCopy = set.toList()
+    for(element in listCopy) {
+        println(element)
+    }
+}
+
 fun main() {    
     //variables()
     //nullSafety()
     //conditionalIf()
-    conditionalWhen()
+    //conditionalWhen()
+    collections()
 }
