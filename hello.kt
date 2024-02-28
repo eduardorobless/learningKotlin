@@ -136,10 +136,34 @@ fun collections(): Unit {
     }
 }
 
+
+fun forLoop(): Unit {
+    for (i in 1..10) {
+        print("$i ")
+    }    
+    for (c in "Kotlin") {
+        print("$c ")
+    }
+    val languages = listOf("Kotlin", "Java", "C")
+    for (lang in languages) {
+        println("$lang ")
+    }
+
+    for (i in 10 downTo 1) {
+        print("$i ")
+    }
+
+       for (i in 10 downTo 1 step 2) {
+        print("$i ")
+    } 
+}
+
+
 fun main() {    
     //variables()
     //nullSafety()
     //conditionalIf()
     //conditionalWhen()
-    collections()
+    //collections()
+    forLoop()
 }
