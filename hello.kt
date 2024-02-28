@@ -23,7 +23,7 @@ fun nullSafety(): Unit {
     println("Using elvis operator, length has a value of: $strLength")
 }   
 
-fun conditionals(): Unit {
+fun conditionalIf(): Unit {
      val i= 50
     // if (i < 15) {
     //     println("i is pretty small")
@@ -47,8 +47,29 @@ fun conditionals(): Unit {
     println("i is $x")
 }
 
+fun conditionalWhen(): Unit {
+    // use when you want to cascade several options
+    val price = 31
+    when(price) {
+        !in 0..0 -> println("price nnot free")
+        1 -> println("For almost free today")
+        in 1..19 -> println("On sale")
+        in 20..29 -> println("Normal price")
+        10 + 20   ->  println("price is 30")
+        else -> println("overpriced")
+    }
+
+
+    when {
+        price <= 19 -> println("cheap product")
+        price <= 29 -> println("not so cheap product")
+        else -> println("overpriced")
+    }
+}
+
 fun main() {    
     //variables()
     //nullSafety()
-    conditionals()
+    //conditionalIf()
+    conditionalWhen()
 }
