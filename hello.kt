@@ -1,4 +1,5 @@
 
+val PI = 3.1415
 fun variables() : Unit  {
     val name: String= "Eduardo Ignacio Robles Sosa"
     var age: Int= 24
@@ -181,7 +182,20 @@ fun functionsShort(age: Int): Boolean = age >= 18
 fun permitEntrance(vararg ages: Int): Boolean {
     return ages.any {age -> age >= 18}
 }
-fun main() {    
+
+fun challenge() {
+    var userInput = readLine()
+    val strLength = userInput?.length ?: 0
+    if(strLength == 0) {
+        print("string length is empty or null")
+    } else {
+        print("String length is $strLength")
+    }
+
+}
+
+fun main(args: Array<String>) {    
+    println(PI)
     //variables()  
     //nullSafety()
     //conditionalIf()
@@ -191,8 +205,9 @@ fun main() {
     //whileLoop()
     //print(functions(7))
     //print(functions(18))
-    println(functionsShort(5))
-    println(functionsShort(25))
-    println(permitEntrance(12, 18, 6))
-    println(permitEntrance(12, 4, 6)) 
+    // println(functionsShort(5))
+    // println(functionsShort(25))
+    // println(permitEntrance(12, 18, 6))
+    // println(permitEntrance(12, 4, 6)) 
+    challenge()
 }
