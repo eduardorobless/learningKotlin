@@ -1,5 +1,7 @@
 
 import java.util.Random
+import java.io.IOException
+
 val PI = 3.1415
 
 fun variables() : Unit  {
@@ -177,6 +179,8 @@ fun whileLoop(): Unit {
 }
 
 
+
+// to test functions
 fun functions(age: Int): Boolean {
     return age >= 18
 }
@@ -239,6 +243,7 @@ fun challenge2() {
 }
 
 
+// to test named and default arguments 
 fun concat(texts: List<String>, separator: String=",") = texts.joinToString(separator)
 
 fun namedArgumentsAndDefaultParameters() {  
@@ -248,7 +253,25 @@ fun namedArgumentsAndDefaultParameters() {
     println(together2)
 }
 
+// to test kotlin exceptions
+fun getExternalInput(): String {
+    throw IOException("Could not read input")
+}
+
+
+
 fun exceptions() {
+    val input = try {
+        getExternalInput()
+    } catch(e: IOException) {
+        e.printStackTrace()
+        "here in exception"
+    } finally {
+        println("Finished trying to read external input")
+    }
+
+
+    println(input)
 
 }
 
@@ -269,5 +292,6 @@ fun main(args: Array<String>) {
     //challenge()
     //challenge2()
 
-    namedArgumentsAndDefaultParameters()
+    //namedArgumentsAndDefaultParameters()
+    exceptions()
 }
