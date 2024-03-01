@@ -69,7 +69,6 @@ fun conditionalWhen(): Unit {
         else -> println("overpriced")
     }
 }
-
 fun collections(): Unit {
     // note that in kotling there are muttable and immutable collections 
     // the main ones are: list, map and sets, lets have fun 
@@ -214,8 +213,17 @@ fun challenge2() {
     
 }
 
+
+fun concat(texts: List<String>, separator: String=",") = texts.joinToString(separator)
+
+fun namedArgumentsAndDefaultParameters() {  
+    val together = concat(texts = listOf("Kotlin", "Java", "Python", "Go")) // testing defafult , separator 
+    val together2 = concat(separator="|", texts = listOf( "C", "C++", "C#"))
+    println(together)
+    println(together2)
+}
+
 fun main(args: Array<String>) {    
-    println(PI)
     //variables()  
     //nullSafety()
     //conditionalIf()
@@ -230,5 +238,7 @@ fun main(args: Array<String>) {
     // println(permitEntrance(12, 18, 6))
     // println(permitEntrance(12, 4, 6)) 
     //challenge()
-    challenge2()
+    //challenge2()
+
+    namedArgumentsAndDefaultParameters()
 }
