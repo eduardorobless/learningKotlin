@@ -186,6 +186,20 @@ fun permitEntrance(vararg ages: Int): Boolean {
     return ages.any {age -> age >= 18}
 }
 
+
+/*
+    Use the readLine() function to read an input from the command line
+
+        Notice the return type of readLine(), and use what you learned to work with it
+
+    The user should input their name
+
+    If the user enters an empty string, store a default value
+
+    Use an if expression to define a different greeting message based on whether the user entered a name
+
+
+ */
 fun challenge() {
     var userInput = readLine()
     val strLength = userInput?.length ?: 0
@@ -196,6 +210,17 @@ fun challenge() {
     }
 
 }
+
+
+/*
+    Create a collection of integers
+
+    Use java.util.Random to fill the collection with 100 random numbers between 1 and 100.
+
+    Go through the collection from start to end and print its elements up to the point where an element is less than or equal to 10
+
+        Do it without using “if” or “when”
+ */
 
 fun challenge2() {
     val integers: MutableList<Int>  = mutableListOf()
@@ -221,6 +246,10 @@ fun namedArgumentsAndDefaultParameters() {
     val together2 = concat(separator="|", texts = listOf( "C", "C++", "C#"))
     println(together)
     println(together2)
+}
+
+fun exceptions() {
+
 }
 
 fun main(args: Array<String>) {    
