@@ -72,6 +72,67 @@ fun zip() {
     println(mapping)
 }
 
+
+
+
+/*
+We decided to gather data on the age of our users.
+
+In this challenge, you'll be presented with this partly faulty data of user ages which is based on four input files:
+
+    // Some faulty data with ages of our users
+    val data = mapOf(
+            "users1.csv" to listOf(32, 45, 17, -1, 34),
+            "users2.csv" to listOf(19, -1, 67, 22),
+            "users3.csv" to listOf(),
+            "users4.csv" to listOf(56, 32, 18, 44)
+    )
+
+
+Apply the functions you learned about as well as other functions from Kotlin's standard library to solve the following data analysis tasks:
+
+    Find the average age of users (use only valid ages for the calculation!)
+    Extract the names of input files that contain faulty data
+    Count the total number of faulty entries across all input files
+ */
+
+fun challenge() {
+    val data = mapOf(
+            "users1.csv" to listOf(32, 45, 17, -1, 34),
+            "users2.csv" to listOf(19, -1, 67, 22),
+            "users3.csv" to listOf(),
+            "users4.csv" to listOf(56, 32, 18, 44)
+    )
+
+    val ages = data.values.flatten() // flatten list of lists into a single list
+    .filter {it >= 0} // filter non valida ages
+    .map {it.toDouble()} // covert each int to double for a more accurate avg calculation
+
+    if (ages.isNotEmpty()) {
+        val avgAge = ages.average()
+        println("Average age: $avgAge")        
+     
+    } else {
+        println("No valid ages found")
+    }
+
+
+
+
+    val keysWithNegative = data.filterValues {it.any {it < 0}}.keys
+
+    println("Ktes with neative values: $keysWithNegative")
+
+    val sizeFaultyEntries = data.values.flatten()
+    .filter{it < 0}
+    .count()
+    println(("Total number of faulty entries: $sizeFaultyEntries"))
+    
+    
+
+    
+}
+
 // for method reference
 fun isEven(i: Int) = i % 2 == 0
 
@@ -82,5 +143,6 @@ fun main(args: Array<String>) {
     //highOrderFunctions()
     //mapAndFlatMap()
     // takeAndDrop()
-    zip()
+    //zip()
+    challenge()
 }
