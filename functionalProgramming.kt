@@ -39,6 +39,38 @@ fun mapAndFlatMap() {
     println(flattened)
 }
 
+fun takeAndDrop() {
+    val list = (1..1000).toList() 
+    val first10 = list.take(10)
+    val remainingLast100 = list.drop(900)
+    println(first10)
+    println(remainingLast100)
+
+
+
+    val listSequence = generateSequence(0) {
+        println("Calculating ${it + 10}")
+        it + 10
+    }
+
+    val firstSequence10 = listSequence.take(10).toList()
+    val firstSequence20 = listSequence.take(20).toList()
+    println(firstSequence10)
+    println(firstSequence20)
+}
+
+
+fun zip() {
+    val list = listOf("hi", "there", "kotlin", "fans")
+    val containsT = listOf(false, true, true, false)
+
+    // Pair<String, Boolean> 
+    val zipped: List<Pair<String, Boolean>> = list.zip(containsT)
+    println(zipped)
+    // or with high order function 
+    val mapping = list.zip(list.map {it.contains("t")} ) 
+    println(mapping)
+}
 
 // for method reference
 fun isEven(i: Int) = i % 2 == 0
@@ -48,5 +80,7 @@ fun Int.even() = this % 2 == 0
 
 fun main(args: Array<String>) {
     //highOrderFunctions()
-    mapAndFlatMap()
+    //mapAndFlatMap()
+    // takeAndDrop()
+    zip()
 }
