@@ -1,4 +1,4 @@
-
+package fp
 fun lambda() {
     val timesTwo =  {x: Int -> x*2}
     val add : (Int, Int) -> Int = {x: Int, y: Int -> x+y}
