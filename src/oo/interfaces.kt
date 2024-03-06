@@ -7,7 +7,7 @@ interface Drivable {
 }
 
 
-class Bycicle :Drivable {
+class Bicycle :Drivable {
     override fun drive() {
         println("Driving bycicle")
     }
@@ -23,6 +23,6 @@ class Boat: Drivable {
 
 
 fun main(args: Array <String>) {
-    val drivable: Drivable = Bycicle()
+    val drivable: Drivable = Bicycle()
     drivable.drive()
 }
