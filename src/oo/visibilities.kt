@@ -4,7 +4,7 @@ package oo
 // protected - same as in java 
 // internal - visible inside same module 
 // public same as in java (Default)
-private val i = 42
+val I = 42
 
 
 open class Car(val brand: String, private val model: String) {
@@ -41,6 +41,6 @@ fun main(args: Array<String>) {
 
 
     // accessing top level private property
-    println(i)
+    println(I)
  
 }
