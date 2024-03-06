@@ -1,7 +1,9 @@
 package oo 
 
 interface Drivable {
-    fun drive()
+    fun drive() {
+        println("Driving interface")
+    }
 }
 
 
