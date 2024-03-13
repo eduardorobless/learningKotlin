@@ -1,4 +1,4 @@
-package oo
+package cova
 
 open class Being
 
@@ -26,4 +26,22 @@ fun main(args: Array<String>) {
     //students2.add(Person()) // type safety prevent that we cant add a Person object to above; invariance
 
     println(":)")
+
+
+    // using kotling time series 
+
+    val events: TimeSeries<Person>  = timeSeriesOf()
+    val students3 : List<Student> = listOf(Student(), Student())
+    events.addAll(students3) // covariance
+
+
+
+    //using java time series
+    val chartData: JavaTimeSeries<Person> = JavaTimeSeries<Person>()
+    chartData.add(Student()) // covariance 
+    chartData.addAll(students3) // ccvariance   
+
+    JavaTimeSeries.greeting(); // testing mixed compilation of java and kotlin files
+    
+
 }
