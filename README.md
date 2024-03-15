@@ -58,13 +58,13 @@ So to generate a jar file that contains both java and kotlin classes we have to:
     `java -cp app.jar cova.CovarianceKt`
 
 
-## Compile Java, Kotlin and calling Java, and Kotling from JavA: 
+## Compile Java, Kotlin and calling Java, and Kotling from Java: 
 
 1. Repeat above steps from 1-4
 2. Compile java class including in the classpath above .jar file: 
-    javac -cp {pathtojarfile}:. TimeSeriesMain.java 
+    `javac -cp {pathtojarfile}:. TimeSeriesMain.java`
 3. Run java main class: 
-    java -cp {pathtojarfile}:. cova.Time
+    `java -cp {pathtojarfile}:. cova.Time`
 
 
 
