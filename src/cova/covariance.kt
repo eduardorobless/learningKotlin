@@ -34,6 +34,9 @@ fun main(args: Array<String>) {
     val students3 : List<Student> = listOf(Student(), Student())
     events.addAll(students3) // covariance
 
+    //testing get last 
+    println(events.getLatest())
+
 
 
     //using java time series
@@ -41,7 +44,11 @@ fun main(args: Array<String>) {
     chartData.add(Student()) // covariance 
     chartData.addAll(students3) // ccvariance   
 
-    JavaTimeSeries.greeting(); // testing mixed compilation of java and kotlin files
+
+    // testing latest 
+    println(chartData.getLatest())
+    // JavaTimeSeries.greeting(); // testing mixed compilation of java and kotlin files
     
 
 }
+kotlin

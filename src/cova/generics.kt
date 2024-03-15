@@ -24,6 +24,11 @@ class TimeSeries<E> {
     fun getLatest(): E {
         return date2Data.values.last()
     }
+
+
+
+
+    
 }
 
 

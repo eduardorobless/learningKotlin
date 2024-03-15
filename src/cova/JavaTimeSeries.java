@@ -19,7 +19,10 @@ public class JavaTimeSeries<E> {
         }
     }
 
-    public void addAllCovariant(Collection<? extends E> elements) {
+    public void addAllCovariant(Collection<? extends E> elements) { //E or any of its subtypes
+    // need as Java as runtime does not have covariance between two collection types, 
+    // as it does not have mutability per se, so you cannot asign a collection subtype 
+    // to another collection type because is violating the Liskov substitution principle
         for (E element: elements) {
             this.add(element);
         }
